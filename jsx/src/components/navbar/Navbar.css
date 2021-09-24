@@ -3,7 +3,8 @@
   flex-wrap: wrap;
   align-items: center;
   background-color: #f4f4f4;
-  height: 80px;
+  height: 100px;
+  padding-left: 30px;
 }
 
 .nav-logo {
@@ -11,12 +12,14 @@
 }
 
 .logo {
-  width: 50px;
+  width: 70px;
+  justify-self: center;
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
+  padding-right: 30px;
 }
 
 .nav-container .nav-links {
