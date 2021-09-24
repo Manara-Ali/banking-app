@@ -46,6 +46,11 @@ const Navbar = () => {
         <Link to="/">
           <img className="logo" src={logo} alt="" ref={imgRef} />
         </Link>
+        <p style={{ marginLeft: "14px" }}>
+          Bank
+          <br />
+          Nerd
+        </p>
       </div>
       <ul className="nav-container" ref={ulRef}>
         <Link className="nav-links" to="/">
