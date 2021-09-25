@@ -9,6 +9,12 @@ import { Link } from "react-router-dom";
 
 // 3. CREATE A FUNCTION BASED COMPONENT
 const SignUp = () => {
+  // Handles form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  // Handles re-routing to login page if user already has an account
   const handleClick = (e) => {
     if (e.target.className === "member-login") {
       document.querySelector(".current").classList.remove("current");
@@ -30,18 +36,24 @@ const SignUp = () => {
             <input type="text" name="lastName" id="last-name" />
           </div>
           <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input type="text" name="email" id="email" />
+            <label htmlFor="username">Username</label>
+            <input type="text" name="username" id="username" />
           </div>
           <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input type="text" name="password" id="password" />
+            <label htmlFor="pin">PIN</label>
+            <input type="password" name="pin" id="pin" />
           </div>
           <div className="form-group">
-            <label htmlFor="confirm-password">Confirm Password</label>
-            <input type="text" name="confirmPassword" id="confirm-password" />
+            <label htmlFor="confirm-pin">Confirm PIN</label>
+            <input type="password" name="confirmPin" id="confirm-pin" />
           </div>
-          <button>Submit</button>
+          <button
+            onClick={(e) => {
+              return handleSubmit(e);
+            }}
+          >
+            Submit
+          </button>
         </form>
         <div className="member">
           Already a member?
