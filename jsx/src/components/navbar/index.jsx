@@ -54,21 +54,21 @@ const Navbar = () => {
       </div>
       <ul className="nav-container" ref={ulRef}>
         <Link className="nav-links" to="/">
-          <li className="current" ref={homeRef}>
+          <li className="current" id="home" ref={homeRef}>
             HOME
           </li>
         </Link>
         <Link className="nav-links" to="/services">
-          <li>SERVICES</li>
+          <li id="services">SERVICES</li>
         </Link>
         <Link className="nav-links" to="/contact">
-          <li>CONTACT</li>
+          <li id="contact">CONTACT</li>
         </Link>
         <Link className="nav-links" to="/login">
-          <li>LOGIN</li>
+          <li id="login">LOGIN</li>
         </Link>
         <Link className="nav-links" to="/signup">
-          <li>SIGNUP</li>
+          <li id="signup">SIGNUP</li>
         </Link>
       </ul>
     </div>

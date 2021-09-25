@@ -1,12 +1,23 @@
+// IMPORT SIGNUP CSS
+import "./Signup.css";
+
 // 1. IMPORT REACT
-import React, { Link } from "react";
+import React from "react";
 
 // 2. ADDITIONAL IMPORTS
+import { Link } from "react-router-dom";
 
 // 3. CREATE A FUNCTION BASED COMPONENT
 const SignUp = () => {
+  const handleClick = (e) => {
+    if (e.target.className === "member-login") {
+      document.querySelector(".current").classList.remove("current");
+      document.querySelector("#login").classList.add("current");
+    }
+  };
   return (
     <div id="container">
+      <br />
       <div className="form-wrap">
         <h1>Sign Up</h1>
         <form>
@@ -23,18 +34,26 @@ const SignUp = () => {
             <input type="text" name="email" id="email" />
           </div>
           <div className="form-group">
-            <label htmlFor="password">PassWord</label>
+            <label htmlFor="password">Password</label>
             <input type="text" name="password" id="password" />
           </div>
           <div className="form-group">
-            <label htmlFor="confirm-password">Confirm PassWord</label>
+            <label htmlFor="confirm-password">Confirm Password</label>
             <input type="text" name="confirmPassword" id="confirm-password" />
           </div>
           <button>Submit</button>
         </form>
         <div className="member">
-          <p>Already a member?</p>
-          {/* <Link to="/login">Login Here</Link> */}
+          Already a member?
+          <Link
+            to="/login"
+            className="member-login"
+            onClick={(e) => {
+              return handleClick(e);
+            }}
+          >
+            Login Here
+          </Link>
         </div>
       </div>
     </div>
